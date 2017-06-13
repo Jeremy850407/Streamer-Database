@@ -1,9 +1,0 @@
-jsonstr = [ {
-	"id":"1",
-	"x":25,
-	"z":30,
-	"bomb":5,
-	"fire":4,
-	"speed":3,
-	"alive": true
-} ];
