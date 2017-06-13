@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <script src = "test.jsonp"></script>
+    <script src = "https://www.google.com/uds/modules/gviz/gviz-api.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table id="statistics" class="table table-condensed table-striped"></table>
+    <script>
+        //var test = $.getJSON("file:///C:/Users/jerem_000/Desktop/Homework/網際服務軟體工程/test/test.json", function(json) {
+        //    console.log(json); // this will show the info it in firebug console
+        //});
+        //updateMe();
+
+         var sheet = 'http://cors.io/spreadsheets.google.com/feeds/list/1j_0qFyPNoct3cb5F-ZvzZZ0O5E65g3SOB8P4T5PNRkg/od6/public/values?alt=json';
+         /*
+         $('#statistics').empty().sheetrock({
+            url: sheet,
+            query: "select A where A <> '名稱'"
+         });    
+         */
+          $.getJSON(sheet,
+              function (data){
+                console.log(data);
+           });
+
+
+
+        function updateMe(){
+            var x = 0;
+            var activity=jsonstr;
+            console.log(activity);
+           // foreach (i in activity) {
+            //    date = document.getElementById(i.date).innerHTML = activity.date;
+            //    event = document.getElementById(i.event).innerHTML = activity.event;
+           // }
+           for(var i in activity){
+                var key = i;
+                //console.log(i);
+                var val = activity[i];
+                for(var j in val){
+                    var sub_key = j;
+                    //console.log(j);
+                    var sub_val = val[j];
+                    //console.log(sub_val);
+                    console.log(sub_key + ": " +sub_val);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

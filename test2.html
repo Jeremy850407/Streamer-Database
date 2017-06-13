@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nickname = "xargon0731";
+        function CheckOnlineStatus()
+        {
+            $.ajax({
+                url: "https://api.twitch.tv/kraken/streams/" + nickname,
+                dataType: 'json',
+                headers: {
+                'Client-ID': "pkhmmzu8hpg98kvatbpog2eo89zyk6"
+                },
+                success: function(channel)
+                {
+                if (channel["stream"] == null)
+                {
+                    alert(nickname+" is not online");
+                } else {
+                    alert(nickname+" is online!");
+                }
+                }
+            });
+        }
+        CheckOnlineStatus();
+    </script>
+</body>
+</html>
