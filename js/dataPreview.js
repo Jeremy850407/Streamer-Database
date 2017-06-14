@@ -1,4 +1,5 @@
 function start(){
+    document.getElementById("overview").className = "active";
     preview();
 }
 var status;
