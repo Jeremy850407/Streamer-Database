@@ -7,10 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
-  <script src="info/streamerData.jsonp"></script>
   <link href="css/carousel.css" rel="stylesheet">
-  <script src="js/dataPreview.js"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
@@ -23,18 +20,10 @@
       margin-bottom: 0;
       height: 200px;
     }
-    .panel-footer.online{
-      background-color: #dff0d8;
-    }
-    .panel-footer.offline{
-      background-color: #f2dede;
-    }
   </style>
 </head>
-<body onload = "start()">
-    <script>
-
-    </script>
+<body>
+    
 <!-- /.carousel -->
 
 
@@ -46,11 +35,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">首頁</a>
+      <a class="navbar-brand" href="#" class="active">首頁</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">總覽</a></li>
+        <li ><a href="#">總覽</a></li>
         <li><a href="#">實況</a></li>
         <li><a href="#">查詢</a></li>
         <li><a href="#">關於我們</a></li>
@@ -58,7 +47,6 @@
     </div>
   </div>
 </nav>
-
  <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -72,12 +60,12 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p>陳彥勳專精<code>炸彈鼠</code>的玩家</p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+		<img src="歪頭.png" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -104,15 +92,63 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    
-<div id="board">    
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">FW-Zonda</div>
+        <div class="panel-body"><img src="歪頭.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">唯一信癢-亞洲統神</div>
+        <div class="panel-body"><img src="歪頭.png" class="img-responsive" style="width:100%" alt="Image">ji3ji3ji3ji3jij3ji3jij3ii3jij</div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">電競公交車-小雲寶寶</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div><br>
 
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+  </div>
 </div><br><br>
-<div class="jumbotron">
+
+
+    <div class="jumbotron">
   <div class="container text-center">
-    <h1>Streamer Database</h1>      
+    <h1>Stramer Database</h1>      
   </div>
 </div>
-
 </body>
 </html>
