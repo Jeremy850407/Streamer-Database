@@ -3,11 +3,36 @@ $(document).ready(function(){
     $("#overviewLink").attr("href" ,"javascript: void(0)" );
     preview();
     $(this).scrollTop(0);
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
 });
 var status;
+var streamerData;
 function preview(){
     var board = document.getElementById("board")
-    var streamerData = StreamerData;
+    streamerData = StreamerData;
     var n = streamerData.length;
     var content = "";
     content += "<form name = 'streamer'>";
@@ -24,9 +49,10 @@ function preview(){
             //content += "href = 'https://www.twitch.tv/" + streamerData[i]["twitchID"] + "' ";
             content += "<img src='info/" + streamerData[i]["名稱"] + "_twitch.png' ";
             
-            content += "class='img-responsive' style='width:100%' alt='Image'></a></div><div class='panel-footer' id = '";
-            content += streamerData[i]["名稱"] + "-footer";
-            content += "'></div>";
+            content += "class='img-responsive' style='width:100%' alt='Image'></a></div>";
+            content += "<div class='panel-footer' id = '";
+            content += streamerData[i]["名稱"] + "-footer'>";
+            content += "</div>";
             
             //img link
             //board.innerHTML += "";
@@ -74,9 +100,39 @@ function CheckOnlineStatus(data){
                 $(className).addClass("online");
                 $(className).append("開台中");
             } else {
-               $(className).addClass("offline");
+                $(className).addClass("offline");
                 $(className).append("關台中");
             }
         }
     });
 }
+
+function checkBoxCheck(){
+    var values = [];
+    var checkBoxList = document.forms['streamer'].elements['num'];
+    for(var i = 0; i < checkBoxList.length; i++){
+        if(checkBoxList[i].checked){
+            values.push(checkBoxList[i].value);
+        }
+    }
+    //alert('You selected: ' + values.join(', '));
+    var url = "http://multitwitch.tv/";
+    for(var i = 0;i < values.length; i++){
+        url += streamerData[values[i]]["twitchID"] + "/";
+    }
+    //alert(url);
+    $("#URL").attr("href" ,url );
+    $("#multiTwitchURL").html(url);
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+
+function checkBoxClear(){
+    var checkBoxList = document.forms['streamer'].elements['num'];
+    for(var i = 0; i < checkBoxList.length; i++){
+        if(checkBoxList[i].checked){
+            checkBoxList[i].checked = false;
+        }
+    }
+}
+

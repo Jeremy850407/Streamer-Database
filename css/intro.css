@@ -1,0 +1,22 @@
+body  {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#name {
+    font-size: 45px;
+}
+#profile {
+    font-size: 18px;
+}
+.jumbotron {
+    margin-bottom: 0;
+    height: 200px;
+    background-color: #ddd;
+}
+.active {
+    font-size: 18px;
+}
+img {
+    width: 340px;
+    height: 340px;
+}

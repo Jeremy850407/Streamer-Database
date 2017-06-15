@@ -1,0 +1,28 @@
+/* Remove the navbar"s default rounded borders and increase the bottom margin */ 
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0;
+}
+/* Remove the jumbotron"s default bottom margin */ 
+    .jumbotron {
+    margin-bottom: 0px;
+    height: 200px;
+}
+body {
+    padding-bottom: 0px;
+    background-color: #ddd;
+}
+.panel-footer.online{
+    background-color: #dff0d8;
+}
+.panel-footer.offline{
+    background-color: #f2dede;
+}
+.carousel {
+    margin-bottom: 20px;
+}
+.carousel-caption h1{
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

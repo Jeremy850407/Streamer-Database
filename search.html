@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+    <script src="info/streamerData.jsonp"></script>
+    <link href="css/carousel.css" rel="stylesheet">
+    <link rel="icon" href="info/ma.jpg">
+</head>
+<body>
+
+    <script src="js/header.js"></script>
+
+    <div class="SearchBox">
+        Search:  <input class="textbox" type="text"> 
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="board"></div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="js/footer.js"></script>
+
+<style>
+
+.textbox {
+    background: #333;
+    color: #ccc;
+    width: 200px;
+    padding: 6px 15px 6px 35px;
+    border-radius: 20px;
+    box-shadow: 0 1px 0 #ccc inset;
+    transition: 500ms all ease;
+    outline: 0;
+}
+ .textbox:hover {
+    width: 270px;
+}
+.SearchBox     {
+    text-align: center;
+    padding:5px
+}
+.jumbotron {
+    margin-bottom: 0;
+    height: 200px;
+    background-color: #ddd;
+}
+body {
+    padding-bottom: 0px;
+}
+</style>
+</body>
+</html>

@@ -11,47 +11,49 @@
   <script src="info/streamerData.jsonp"></script>
   <link href="css/carousel.css" rel="stylesheet">
   <script src="js/dataPreview.js"></script>
+  <link href="css/overview.css" rel="stylesheet">
+  <link rel="icon" href="info/ma.jpg">
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
     
-    /* Remove the jumbotron's default bottom margin */ 
-    .jumbotron {
-      margin-bottom: 0;
-      height: 200px;
-    }
-    .panel-footer.online{
-      background-color: #dff0d8;
-    }
-    .panel-footer.offline{
-      background-color: #f2dede;
-    }
-    body {
-      padding-bottom: 0px;
-    }
-    .active {
-      font-size: 18px;
-    }
-    input   {
-      float: right;
-      width: 15px;
-      height: 15px;
-    }
   </style>
 </head>
 <body>
-<!-- /.carousel -->
+  <!-- /.carousel -->
 
 
-<script src="js/header.js"></script>
+  <script src="js/header.js"></script>
 
-    
-<div id="board"></div>
-<br><br>
-<script src="js/footer.js"></script>
+  
+  <div id="board"></div>
+  
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>MultiTwitch URL</h2>
+      </div>
+      <div class="modal-body">
+        <br>
+        <p>
+          <a href="" target="_blank" id = "URL">
+            <span id = "multiTwitchURL">Some text in the Modal Body</span>
+          </a>
+          </p>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='container text-center'>
+    <button class="button" onclick="checkBoxCheck();" id="myBtn">確定</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button" onclick="checkBoxClear();">重置</button>
+  </div>
+  <br><br>
+  <script src="js/footer.js"></script>
 
 </body>
 </html>
