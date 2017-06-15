@@ -1,7 +1,9 @@
 $(document).ready(function(){
     $("#home").css("color", "#fff");
     $("#home").css("fontSize", "22px");
+    $("#home").css("background-color", "#080808");
     $("#home").attr("href" ,"javascript: void(0)" );
+    
     $(this).scrollTop(0);
     carouselChange(5);
 });

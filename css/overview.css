@@ -1,5 +1,5 @@
 .navbar {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     border-radius: 0;
 }
 
@@ -25,6 +25,18 @@ input   {
     float: right;
     width: 15px;
     height: 15px;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.panel-heading {
+    font-size: 20px;
 }
 .button {
     display: inline-block;

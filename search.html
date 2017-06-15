@@ -10,7 +10,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
     <script src="info/streamerData.jsonp"></script>
+    <script src="js/search.js"></script>
     <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/search.css" rel="stylesheet">
     <link rel="icon" href="info/ma.jpg">
 </head>
 <body>
@@ -18,39 +20,15 @@
     <script src="js/header.js"></script>
 
     <div class="SearchBox">
-        Search:  <input class="textbox" type="text"> 
+        <span style="font-size: 26px; vertical-align: middle;">Search:</span>
+        &nbsp;&nbsp;
+        <input class="textbox" id = "search" type="text" onkeyup="search(this,event);"> 
+        <!--<button id = "searchBtn">查詢</button>-->
     </div>
-    <br><br><br><br><br><br><br><br><br>
-    <div id="board"></div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <div id="board"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="js/footer.js"></script>
 
-<style>
-
-.textbox {
-    background: #333;
-    color: #ccc;
-    width: 200px;
-    padding: 6px 15px 6px 35px;
-    border-radius: 20px;
-    box-shadow: 0 1px 0 #ccc inset;
-    transition: 500ms all ease;
-    outline: 0;
-}
- .textbox:hover {
-    width: 270px;
-}
-.SearchBox     {
-    text-align: center;
-    padding:5px
-}
-.jumbotron {
-    margin-bottom: 0;
-    height: 200px;
-    background-color: #ddd;
-}
-body {
-    padding-bottom: 0px;
-}
-</style>
 </body>
 </html>

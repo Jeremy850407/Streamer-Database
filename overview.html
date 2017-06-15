@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
   <script src="info/streamerData.jsonp"></script>
   <link href="css/carousel.css" rel="stylesheet">
   <script src="js/dataPreview.js"></script>
@@ -21,9 +23,11 @@
 <body>
   <!-- /.carousel -->
 
-
   <script src="js/header.js"></script>
 
+  <button style="position:relative; left:96%; top: 1%; " type="button" class="btn btn-success btn-circle" title="小提示" data-container="body" data-toggle="popover" data-placement="left" data-content="打開實況主圖片右下角的框框可以一次收看多位實況主的實況哦">
+    <i class="fa fa-exclamation fa-2x" aria-hidden="true" style="margin-top:-3px;"></i>
+  </button>
   
   <div id="board"></div>
   
@@ -46,6 +50,7 @@
     </div>
   </div>
 
+  
 
   <div class='container text-center'>
     <button class="button" onclick="checkBoxCheck();" id="myBtn">確定</button>

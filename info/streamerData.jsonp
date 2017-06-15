@@ -80,7 +80,7 @@ var StreamerData = [
     "id": 12,
     "名稱": "Toyz",
     "twitchID": "toyz",
-    "fbID": "kurtis.lau",
+    "fbID": "",
     "簡介": "劉偉健（遊戲代號Toyz、小健，1992年6月9日－）是一名來自香港的電競選手，主要參與《獵神》賽事。曾在香港電子競技隊伍CG（CrossGaming）隊擔任上中下路一職，並以Toyz為選手id，在2012年4月22日加盟台灣電競隊伍——台北暗殺星，隨後在比賽中有良好的表現，為台北暗殺星在英雄聯盟全球總決賽第二季（Season 2 World Championship）拿下世界冠軍。2015年為香港電子競技有限公司旗下的香港電子競技戰隊（Hong Kong Esports）的成員，2016年11月轉戰Raise Gaming<br>在twitchID直播時，最高同時收看人數曾超過110000人。"
   },
   {
@@ -138,5 +138,12 @@ var StreamerData = [
     "twitchID": "yuniko0720",
     "fbID": "yuniko0720/",
     "簡介": "曾擔任英雄聯盟賽事主持人以及主持過多種活動，現在則為魔競旗下實況主，個性可愛討喜，擁有大批粉絲"
+  },
+  {
+    "id": 21,
+    "名稱": "AimbotCalvin",
+    "twitchID": "aimbotcalvin",
+    "fbID": "",
+    "簡介": "hello my name is calvin, i am 19 years of age.<br>chinese vietnamese / australian descent (my mom is from Australia thats why) ; born & raised in LA<br> come from Crossfire & CS:GO<br>and no i didnt come from closed beta.<br>29 hours is my most i have ever streamed in one sitting<br>my vocabulary is really dumb so excuse me for the small use of words thank you !gpa<br>started streaming on christmas eve of 2016, thank you for your supports!<br>play with passion, be confident to play confident i am very emotional person, i have lots of love for the game<br>"
   }
 ]

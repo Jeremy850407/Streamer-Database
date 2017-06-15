@@ -4,6 +4,10 @@ $(document).ready(function(){
     preview();
     $(this).scrollTop(0);
 
+    $(function () { 
+	    $("[data-toggle='popover']").popover();
+	});
+
     // Get the modal
     var modal = document.getElementById('myModal');
 
@@ -26,6 +30,7 @@ $(document).ready(function(){
             modal.style.display = "none";
         }
     }
+
 
 });
 var status;
@@ -82,6 +87,13 @@ function preview(){
 function checkBox(data, num){
     var className = "#" + data["名稱"] + "-footer";
     $(className).append("<input type='checkbox' name='num' value='"+ num +"'>")
+    $(function() {
+		var $div = $(className),$cbox = $(className).find('input');
+
+		$div.on('click', function(e) {
+             if(e.target !== $cbox.get(0)) $cbox.prop('checked', !$cbox.prop('checked'));
+            });
+	});
 }
 
 function CheckOnlineStatus(data){

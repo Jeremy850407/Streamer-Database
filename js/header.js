@@ -9,7 +9,7 @@ document.write("<nav class='navbar navbar-inverse'>\
       <ul class='nav navbar-nav'>\
         <li id = 'overview'><a id = 'overviewLink' href='overview.html'>總覽</a></li>\
         <li id = 'intro'><a id = 'introLink' href='intro.html'>介紹</a></li>\
-        <li id = 'search'><a id = 'searchLink' href='#'>查詢</a></li>\
+        <li id = 'search'><a id = 'searchLink' href='search.html'>查詢</a></li>\
         <li id = 'about'><a id = 'aboutLink' href='about.html'>關於我們</a></li>\
       </ul>\
     </div>\
