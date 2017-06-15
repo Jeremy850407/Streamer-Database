@@ -10,6 +10,7 @@ var streamerData;
 function search(obj,e){
     streamerData = StreamerData;
     var keyword = obj.value;
+    keyword = keyword.toLowerCase();
     var values = [];
     var board = document.getElementById("board");
     var content;

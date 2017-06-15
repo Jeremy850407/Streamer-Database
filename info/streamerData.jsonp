@@ -1,7 +1,7 @@
 var StreamerData = [
   {
     "id": 1,
-    "名稱": "LNGworkshop",
+    "名稱": "LNGWorkshop",
     "twitchID": "lngworkshop",
     "fbID": "LNGworkshop",
     "簡介": "LNG WorkShop（六鳥歌工作坊，簡稱LNG）是twitchID上的一個知名實況團體。成員包含六嘆、鳥屎、老王、Leggy、八毛、小六。其幽默風趣的話題和無話不談的節目內容，使其話題易成為台灣年輕人的流行風潮，但聊天內容帶點黃色和黑色幽默，團員皆表示不適合年紀太小觀眾來看。"
