@@ -1,24 +1,26 @@
-var streamerData
-
-function start(){
-    document.getElementById("intro").className = "active";
+var streamerData;
+$(document).ready(function(){
+    $("#intro").attr("class" ,"active" );
+    $("#introLink").attr("href" ,"javascript: void(0)" );
+    $(this).scrollTop(0);
+    streamerData = StreamerData;
+    var id = getID();
+    player(streamerData[id]["twitchID"]);
+    $("title").html(streamerData[id]["名稱"]);
+    preview(id);
+});
+function getID(){
     var url_string = window.location.href;
     var url = new URL(url_string);
     var num = url.searchParams.get("q");
-    streamerData = StreamerData;
     if( num == null ){
         num = Math.floor(Math.random() * streamerData.length);
     }else{
         num = parseInt(num);
     }
-    player(streamerData[num]["twitchID"]);
-    document.title = streamerData[num]["名稱"];
-    preview(num);
+    return num;
 }
 
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
 
 function player(twitchID){
     var options = {

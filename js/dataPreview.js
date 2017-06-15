@@ -1,13 +1,16 @@
-function start(){
-    document.getElementById("overview").className = "active";
+$(document).ready(function(){
+    $("#overview").attr("class" ,"active" );
+    $("#overviewLink").attr("href" ,"javascript: void(0)" );
     preview();
-}
+    $(this).scrollTop(0);
+});
 var status;
 function preview(){
     var board = document.getElementById("board")
     var streamerData = StreamerData;
     var n = streamerData.length;
     var content = "";
+    content += "<form name = 'streamer'>";
     for(var i = 0;i < n;i++){
         if(i < n){
             if(i % 3 == 0){
@@ -22,7 +25,7 @@ function preview(){
             content += "<img src='info/" + streamerData[i]["名稱"] + "_twitch.png' ";
             
             content += "class='img-responsive' style='width:100%' alt='Image'></a></div><div class='panel-footer' id = '";
-            content += streamerData[i]["名稱"] + " footer";
+            content += streamerData[i]["名稱"] + "-footer";
             content += "'></div>";
             
             //img link
@@ -38,15 +41,22 @@ function preview(){
             //console.log(streamerData[i]["名稱"]);
         }
     }
+    content += "</form>"
     board.innerHTML = content;
+    
+    for(var i = 0;i < n;i++){
+        checkBox(streamerData[i], i);
+    }
+
     for(var i = 0;i < n;i++){
         CheckOnlineStatus(streamerData[i]);
     }
 }
 
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
+function checkBox(data, num){
+    var className = "#" + data["名稱"] + "-footer";
+    $(className).append("<input type='checkbox' name='num' value='"+ num +"'>")
+}
 
 function CheckOnlineStatus(data){
     $.ajax({
@@ -58,13 +68,14 @@ function CheckOnlineStatus(data){
         },
         success: function(channel)
         {
+            var className = "#" + data["名稱"] + "-footer";
             if (channel["stream"] != null)
             {
-                document.getElementById(data["名稱"] + " footer").className += " online";
-                document.getElementById(data["名稱"] + " footer").innerHTML = "開台中";
+                $(className).addClass("online");
+                $(className).append("開台中");
             } else {
-                document.getElementById(data["名稱"] + " footer").className += " offline";
-                document.getElementById(data["名稱"] + " footer").innerHTML = "關台中";
+               $(className).addClass("offline");
+                $(className).append("關台中");
             }
         }
     });

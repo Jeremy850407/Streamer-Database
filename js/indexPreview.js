@@ -1,13 +1,10 @@
-function start(){
-     document.getElementById("home").style.color = "#fff";
-     document.getElementById("home").style.backgroundColor = "##080808";
-     document.getElementById("home").style.fontSize = "22px";
-     
-
+$(document).ready(function(){
+    $("#home").css("color", "#fff");
+    $("#home").css("fontSize", "22px");
+    $("#home").attr("href" ,"javascript: void(0)" );
+    $(this).scrollTop(0);
     carouselChange(5);
-     //carousel(5)
-     //previewSome(6);
-}
+});
 
 function carouselChange(num){
     var streamerData = StreamerData;
