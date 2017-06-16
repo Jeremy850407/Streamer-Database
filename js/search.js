@@ -49,6 +49,13 @@ function search(obj,e){
                 content += values[i]["名稱"] + "-footer'>";
                 content += "</div></div></div></div></div>";
             }
+        }else if(values.length == 0){
+            content = "<div style='\
+                text-align: center;\
+                font-weight: 700;\
+                font-size: 50px;\
+                '>查無資料\
+                </div>";
         }else{
             for(var i = 0;i < values.length;i++){
                 if(i < values.length){
