@@ -7,6 +7,25 @@ $(document).ready(function(){
     $(function () { 
 	    $("[data-toggle='popover']").popover();
 	});
+    document.getElementById("myBtn").disabled = true;
+    document.getElementById("clear").disabled = true;
+
+    $(".checkbox").change(function() {
+        var values = 0;
+        var checkBoxList = document.forms['streamer'].elements['num'];
+        for(var i = 0; i < checkBoxList.length; i++){
+            if(checkBoxList[i].checked){
+                values += 1;
+            }
+        }
+        if(values == 0){
+            document.getElementById("myBtn").disabled = true;
+            document.getElementById("clear").disabled = true;
+        }else{
+            document.getElementById("myBtn").disabled = false;
+            document.getElementById("clear").disabled = false;
+        }
+    });
 
     // Get the modal
     var modal = document.getElementById('myModal');
@@ -86,7 +105,7 @@ function preview(){
 
 function checkBox(data, num){
     var className = "#" + data["名稱"] + "-footer";
-    $(className).append("<input type='checkbox' name='num' value='"+ num +"'>")
+    $(className).append("<input type='checkbox' class = 'checkbox' name='num' value='"+ num +"'>")
     $(function() {
 		var $div = $(className),$cbox = $(className).find('input');
 

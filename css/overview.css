@@ -131,3 +131,12 @@ input   {
     font-size: 20px;
     word-wrap: break-word;
 }
+button:disabled
+{
+    background:#CCC;
+}
+
+button:disabled:hover
+{
+    background:#CCC;
+}
