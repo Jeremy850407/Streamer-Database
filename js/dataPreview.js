@@ -11,20 +11,7 @@ $(document).ready(function(){
     document.getElementById("clear").disabled = true;
 
     $(".checkbox").change(function() {
-        var values = 0;
-        var checkBoxList = document.forms['streamer'].elements['num'];
-        for(var i = 0; i < checkBoxList.length; i++){
-            if(checkBoxList[i].checked){
-                values += 1;
-            }
-        }
-        if(values == 0){
-            document.getElementById("myBtn").disabled = true;
-            document.getElementById("clear").disabled = true;
-        }else{
-            document.getElementById("myBtn").disabled = false;
-            document.getElementById("clear").disabled = false;
-        }
+        checkBoxStatus();
     });
 
     // Get the modal
@@ -110,8 +97,9 @@ function checkBox(data, num){
 		var $div = $(className),$cbox = $(className).find('input');
 
 		$div.on('click', function(e) {
-             if(e.target !== $cbox.get(0)) $cbox.prop('checked', !$cbox.prop('checked'));
-            });
+            if(e.target !== $cbox.get(0)) $cbox.prop('checked', !$cbox.prop('checked'));
+            checkBoxStatus();
+        });
 	});
 }
 
@@ -167,3 +155,19 @@ function checkBoxClear(){
     }
 }
 
+function checkBoxStatus(){
+    var values = 0;
+    var checkBoxList = document.forms['streamer'].elements['num'];
+    for(var i = 0; i < checkBoxList.length; i++){
+        if(checkBoxList[i].checked){
+            values += 1;
+        }
+    }
+    if(values == 0){
+        document.getElementById("myBtn").disabled = true;
+        document.getElementById("clear").disabled = true;
+    }else{
+        document.getElementById("myBtn").disabled = false;
+        document.getElementById("clear").disabled = false;
+    }
+}

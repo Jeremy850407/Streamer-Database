@@ -65,7 +65,7 @@ function search(obj,e){
                     content += "<div class='col-sm-4'><div class='panel panel-primary'><div class='panel-heading'>";
                     content += values[i]["名稱"];
                     content += "</div><div class='panel-body'>";
-                    content += "<a href = 'intro.html?q=" + i + "' target = '_blank'>";
+                    content += "<a href = 'intro.html?q=" + (values[i]["id"] -  1) + "' target = '_blank'>";
                     
                     content += "<img src='info/" + values[i]["名稱"] + "_twitch.png' ";
                     
