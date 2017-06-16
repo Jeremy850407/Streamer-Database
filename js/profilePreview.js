@@ -39,7 +39,7 @@ function preview(num){
     intro = streamerData[num]["簡介"];
     document.getElementById("profile").innerHTML += intro;
     document.getElementById("pic").src = "info/" + streamerData[num]["名稱"] + "_profile.png";
-    if(num != 11 || num != 20  || num != 22){
+    if(num != 11 && num != 20  && num != 22){
         var fanPage = "<iframe src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F";
         fanPage += streamerData[num]["fbID"];
         fanPage += "&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' width='340' height='500' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true'></iframe>";
