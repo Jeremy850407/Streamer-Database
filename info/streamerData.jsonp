@@ -152,5 +152,12 @@ var StreamerData = [
     "twitchID": "honeyliciousss",
     "fbID": "Honeyliciousss",
     "簡介": "❤️於傲翔天際的妾身,原本滿足在三萬呎高空的生活.偶然一次在飛機上,與拳頭公司(Riot)的大老闆有了一面之緣後,燃起了娘娘心中的英雄聯盟魂. 在這,妾身透過實況 ,和王爺們共遊在遊戲中,再續前緣！"
+  },
+  {
+    "id": 23,
+    "名稱": "iddqd",
+    "twitchID": "iddqdow",
+    "fbID": "",
+    "簡介": "Hello!<br>I am André \"iddqd\" Dahlström and I'm a Swedish DPS player for NRG's Overwatch team.<br>My gaming history and habits go way back to the Doom days. This is also where my name comes from.<br>I was a little pleb and couldn't finish Doom at my current age. So my father would put a little note on the left side of the screen. \"Press §, write IDDQD\". What does iddqd mean? This is a cheat code that would make you invincible in the game and inevitably make me finish it. This is such a fond memory to me so I decided to keep it close with me and use it as a nickname."
   }
 ]
