@@ -145,5 +145,12 @@ var StreamerData = [
     "twitchID": "aimbotcalvin",
     "fbID": "",
     "簡介": "hello my name is calvin, i am 19 years of age.<br>chinese vietnamese / australian descent (my mom is from Australia thats why) ; born & raised in LA<br> come from Crossfire & CS:GO<br>and no i didnt come from closed beta.<br>29 hours is my most i have ever streamed in one sitting<br>my vocabulary is really dumb so excuse me for the small use of words thank you !gpa<br>started streaming on christmas eve of 2016, thank you for your supports!<br>play with passion, be confident to play confident i am very emotional person, i have lots of love for the game<br>"
+  },
+  {
+    "id": 22,
+    "名稱": "天菜娘娘",
+    "twitchID": "honeyliciousss",
+    "fbID": "Honeyliciousss",
+    "簡介": "❤️於傲翔天際的妾身,原本滿足在三萬呎高空的生活.偶然一次在飛機上,與拳頭公司(Riot)的大老闆有了一面之緣後,燃起了娘娘心中的英雄聯盟魂. 在這,妾身透過實況 ,和王爺們共遊在遊戲中,再續前緣！"
   }
 ]
